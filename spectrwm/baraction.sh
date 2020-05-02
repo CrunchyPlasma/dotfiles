@@ -1,5 +1,6 @@
 #!/bin/bash
 # baraction.sh for spectrwm status bar
+HOSTNAME=$(cat /etc/hostname)
 
 ## DATE
 dte() {
@@ -36,9 +37,23 @@ vol() {
     echo -e "VOL: $vol"
 }
 
-SLEEP_SEC=5
+## BATTERY
+bat() {
+	CAPACITY=$(cat /sys/class/power_supply/BAT0/capacity)
+	echo "BAT: ${CAPACITY}%"
+}
+
+bat_stat() {
+	STATUS=$(cat /sys/class/power_supply/BAT0/status)
+	if [[ "${STATUS}" = 'Charging' ]]
+	then
+		echo '(Chg)'
+	fi
+}
+
+SLEEP_SEC=1
 #loops forever outputting a line every SLEEP_SEC secs
 while :; do
-    echo "$(dte) | $(cpu) | $(vol)"
+	echo "$(dte) | $(cpu) | $(vol) $(if [[ "${HOSTNAME}" = 'crunchtop' ]]; then echo "| $(bat) $(bat_stat)"; fi)"
 	sleep $SLEEP_SEC
 done
