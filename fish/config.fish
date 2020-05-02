@@ -9,9 +9,9 @@ fish_vi_key_bindings
 # Aliases
 
 alias vi='nvim'
-alias sl='exa'
-alias ls='exa'
-alias la='exa -a'
+#alias sl='exa'
+#alias ls='exa'
+#alias la='exa -a'
 alias cr='cd /'
 alias gs='git status'
 
