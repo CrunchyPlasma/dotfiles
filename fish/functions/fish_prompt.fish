@@ -73,7 +73,7 @@ function __simple_ass_prompt_get_host -d "Get Hostname"
     set_color yellow
     #set_color f1fa8c
   end
-  printf '%s' (hostname|cut -d . -f 1)
+  printf '%s' (cat /etc/hostname|cut -d . -f 1)
 end
 
 # Get Project Working Directory
