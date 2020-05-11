@@ -1,6 +1,8 @@
 " DEPENCENCIES:
 " ctag
 "
+"Split file up using
+"source /path/to/file
 
 set nocompatible
 " Use spaces instead of tabs
