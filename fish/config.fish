@@ -8,7 +8,7 @@ fish_vi_key_bindings
 
 # Aliases
 
-alias vi='nvim'
+alias v='nvim'
 #alias sl='exa'
 #alias ls='exa'
 #alias la='exa -a'
@@ -21,5 +21,3 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 set -x TERMINAL termite
 set -x TERM termite
-
-thefuck --alias | source
