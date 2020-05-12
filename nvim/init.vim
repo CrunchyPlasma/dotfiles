@@ -1,6 +1,3 @@
-" DEPENCENCIES:
-" ctag
-"
 "Split file up using
 "source /path/to/file
 
@@ -22,7 +19,7 @@ syntax enable
 filetype plugin on
 
 " allows recursive find
-set path+=**
+set path=**
 
 " Use MakeTags to generate tags file
 command! MakeTags !ctags -R .
