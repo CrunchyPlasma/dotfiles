@@ -1,5 +1,6 @@
 "Split file up using
 "source /path/to/file
+source ~/.config/nvim/snippets/snippets.vim
 
 set nocompatible
 " Use spaces instead of tabs
@@ -38,7 +39,3 @@ command! MakeTags !ctags -R .
 " ^x-s spelling
 
 " TODO implement some abbreviations (see help)
-
-
-" Implementing snippets
-" nnoremap ,snippet_name :-1read /path/to/template<CR>move to insert
