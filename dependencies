@@ -1,2 +1,11 @@
 Spectrwm:
+    hermit font
+    picom
+    feh
+    unclutter
+    pamixer
+    rofi
+    termite
+Neovim:
+    ctags    
 
