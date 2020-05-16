@@ -2,7 +2,6 @@
 "source /path/to/file
 source ~/.config/nvim/snippets/snippets.vim
 
-set nocompatible
 " Use spaces instead of tabs
 set expandtab
 
@@ -17,7 +16,7 @@ set number
 set smartcase
 
 syntax enable
-filetype plugin on
+filetype plugin indent on
 
 " allows recursive find
 set path=**
