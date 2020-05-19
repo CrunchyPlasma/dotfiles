@@ -1,0 +1,9 @@
+include "%L"
+
+<Multi_key> <o> <semicolon> : "ö"
+<Multi_key> <O> <semicolon> : "Ö"
+<Multi_key> <a> <semicolon> : "ä"
+<Multi_key> <A> <semicolon> : "Ä"
+<Multi_key> <a> <o> : "å"
+<Multi_key> <A> <o> : "Å"
+
