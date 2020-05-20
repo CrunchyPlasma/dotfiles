@@ -21,3 +21,4 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 set -x TERMINAL termite
 set -x TERM termite
+set -ax PATH $HOME/.local/bin
