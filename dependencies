@@ -6,6 +6,8 @@ Spectrwm:
     pamixer
     rofi
     termite
+    xsecurelock
+    dunst
 Neovim:
     ctags    
 
