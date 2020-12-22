@@ -1,9 +1,18 @@
 "Split file up using
 "source /path/to/file
 source ~/.config/nvim/snippets/snippets.vim
+source ~/.config/nvim/vim-plug/plug.vim
 
-" Use spaces instead of tabs
-set expandtab
+"plugins
+call plug#begin('~/.config/nvimplugs')
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
+call plug#end()
+
+" Tagbar
+nnoremap <silent> <f8> :TagbarToggle<CR>
+nnoremap <silent> <f9> :TagbarOpen fjc<CR>
 
 " Be smart when using tabs ;)
 set smarttab
