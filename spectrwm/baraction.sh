@@ -45,11 +45,22 @@ bat() {
 
 bat_stat() {
 	STATUS=$(cat /sys/class/power_supply/BAT0/status)
-	if [[ "${STATUS}" = 'Charging' ]]
+	if [[ "${STATUS}" = 'Discharging' ]]
 	then
-		echo '(Chg)'
+		ENE=$(cat /sys/class/power_supply/BAT0/energy_now)
+		POW=$(cat /sys/class/power_supply/BAT0/power_now)
+		BATH=$(( ${ENE} / ${POW} ))
+		BATM=$(( ( ( ( (${ENE} * 100) / ${POW} ) - (${BATH} * 100) ) * 60) / 100 ))
+		BATTIME="(${BATH}:${BATM})"
+	elif [[ "${STATUS}" = 'Charging' ]]
+	then
+		BATTIME='(Chg)'
+	else
+		BATTIME='(-)'
 	fi
+	echo ${BATTIME}
 }
+
 
 SLEEP_SEC=1
 #loops forever outputting a line every SLEEP_SEC secs
