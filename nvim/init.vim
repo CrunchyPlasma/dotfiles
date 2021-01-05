@@ -30,6 +30,8 @@ set smartcase
 
 syntax enable
 filetype plugin indent on
+" allows for language compleation
+set omnifunc=syntaxcomplete#Complete
 
 " allows recursive find
 set path=**
